@@ -56,10 +56,10 @@ namespace UpMeet.Services
             conn.Insert(fav);
         }
 
-        public void RemoveFavorite(long id)
+        public void RemoveFavorite(Favorites fav)
         {
             SqlConnection conn = new SqlConnection(connString);
-            conn.Delete(new Favorites() {ID = id });
+            conn.Delete(new Favorites() {ID = fav.ID});
         }
 
         public void RemoveEvents(Events eve)

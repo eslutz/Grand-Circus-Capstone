@@ -32,9 +32,9 @@ namespace UpMeet.Controllers
         }
         
         [HttpPost("remove")]
-        public void RemoveFavorite(long id)
+        public void RemoveFavorite(Favorites fav)
         {
-            dal.RemoveFavorite(id);
+            dal.RemoveFavorite(fav);
         }
 
     }

@@ -18,9 +18,9 @@ namespace UpMeet.Services
 
         void AddFavorite(Favorites fav);
 
-        void RemoveFavorite(long ID);
+        void RemoveFavorite(Favorites fav);
 
-        void RemoveEvents(Events eve);
+        //void RemoveEvents(Events eve);
 
     }
 }
