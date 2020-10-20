@@ -31,13 +31,13 @@ namespace UpMeet.Controllers
             return dal.GetEvent((long)id); // cast?
         }
 
-        [HttpPost]
+        [HttpPost("add")]
         public void AddEvent(Events newEvent) {
 
             dal.AddEvent(newEvent);
         }
 
-        [HttpPost]
+        [HttpPost("remove")]
         public void RemoveEvent(Events eve)
         {
             dal.RemoveEvents(eve);

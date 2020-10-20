@@ -32,8 +32,8 @@ namespace UpMeet.Services
             Events result = conn.QueryFirst<Events>(command, new { EventID = ID });
             conn.Close();
             return result;
-
         }
+
         public void AddEvent(Events newEvent)
         {
             SqlConnection conn = new SqlConnection(connString);
