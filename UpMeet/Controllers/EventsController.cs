@@ -37,12 +37,13 @@ namespace UpMeet.Controllers
             dal.AddEvent(newEvent);
         }
 
+        /*
         [HttpPost("remove")]
         public void RemoveEvent(Events eve)
         {
             dal.RemoveEvents(eve);
         }
-
+        */
 
     }
 }

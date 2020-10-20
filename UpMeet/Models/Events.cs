@@ -10,7 +10,7 @@ namespace UpMeet.Models
     public class Events
     {
         [Key]
-        public long? EventID { get; set; }
+        public long EventID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Date { get; set; }
