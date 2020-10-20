@@ -24,17 +24,17 @@ namespace UpMeet.Controllers
         {
             return dal.GetAllFavorites(username);
         }
-
-        [HttpPost]
+        
+        [HttpPost("add")]
         public void AddFavorite(Favorites fav)
         {
             dal.AddFavorite(fav);
         }
-
-        [HttpPost]
-        public void RemoveFavorite(Favorites fav)
+        
+        [HttpPost("remove")]
+        public void RemoveFavorite(long id)
         {
-            dal.RemoveFavorite(fav);
+            dal.RemoveFavorite(id);
         }
 
     }

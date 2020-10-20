@@ -43,7 +43,7 @@ namespace UpMeet.Services
         public IEnumerable<Events> GetAllFavorites(string username)
         {
             SqlConnection conn = new SqlConnection(connString);
-            string command = "SELECT Events.EventID, Events.Name, Events.Description, Events.Date FROM dbo.Favorites full join dbo.Events on dbo.Events.EventID = dbo.Favorites.EventID where Username = '@username';";  //semicolon?
+            string command = $"SELECT Events.EventID, Events.Name, Events.Description, Events.Date FROM dbo.Favorites full join dbo.Events on dbo.Events.EventID = dbo.Favorites.EventID where Username = '{username}';";  //semicolon?
             IEnumerable<Events> result = conn.Query<Events>(command);
             conn.Close();
             return result;
@@ -51,14 +51,22 @@ namespace UpMeet.Services
 
         public void AddFavorite(Favorites fav)
         {
+            fav.ID = DateTime.Now.Ticks;
             SqlConnection conn = new SqlConnection(connString);
             conn.Insert(fav);
         }
 
-        public void RemoveFavorite(Favorites fav)
+        public void RemoveFavorite(long id)
         {
             SqlConnection conn = new SqlConnection(connString);
-            conn.Delete(new Favorites() {ID = fav.ID });
+            conn.Delete(new Favorites() {ID = id });
         }
+
+        public void RemoveEvents(Events eve)
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Delete(new Events() { EventID = eve.EventID });
+        }
+
     }
 }

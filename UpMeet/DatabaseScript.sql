@@ -81,7 +81,7 @@ CREATE TABLE [dbo].[Events](
 	[EventID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](50) NOT NULL,
 	[Description] [varchar](max) NOT NULL,
-	[Date] [date] NOT NULL,
+	[Date] [varchar](50) NOT NULL,
  CONSTRAINT [PK_Events] PRIMARY KEY CLUSTERED 
 (
 	[EventID] ASC
