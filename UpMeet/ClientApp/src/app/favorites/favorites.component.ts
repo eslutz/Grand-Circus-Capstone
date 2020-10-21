@@ -13,7 +13,7 @@ export class FavoritesComponent {
   constructor(private dal: DataAccessService) {}
 
   favEvents: Events;
-  username: string = "testuser2";
+  username: string = "Eric";
   @Input() currentUser: string;
 
   ngOnInit(): void {
