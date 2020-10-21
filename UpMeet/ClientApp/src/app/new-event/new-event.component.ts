@@ -20,7 +20,10 @@ export class NewEventComponent {
   };
 
   doCreate() {
-    this.dal.createEvent(this.event).subscribe((data) => this.event = { ...data });
+    this.dal.createEvent(this.event).subscribe((data: EventDetails) => {
+      this.event = { ...data };
+      console.log(this.event);
+    });
   }
 
 }

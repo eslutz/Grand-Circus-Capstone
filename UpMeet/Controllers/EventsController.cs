@@ -32,9 +32,10 @@ namespace UpMeet.Controllers
         }
 
         [HttpPost("add")]
-        public void AddEvent(Events newEvent) {
-
+        public Events AddEvent(Events newEvent)
+        {
             dal.AddEvent(newEvent);
+            return newEvent;
         }
     }
 }

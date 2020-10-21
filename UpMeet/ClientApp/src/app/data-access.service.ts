@@ -7,8 +7,8 @@ import { Events } from './interfaces/events';
 export class DataAccessService {
   constructor(private http: HttpClient) { }
 
-  apiEvents: string = 'api/Events';
-  apiFavorites: string = 'api/Favorites';
+  apiEvents: string = '/api/Events';
+  apiFavorites: string = '/api/Favorites';
 
   getAllEvents() {
     return this.http.get<Events>(this.apiEvents);
