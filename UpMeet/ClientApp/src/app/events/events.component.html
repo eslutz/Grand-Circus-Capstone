@@ -1,5 +1,9 @@
+Username: <input [(ngModel)]="username" type="text" /><br />
 <h1>Events</h1>
-<button routerLink="/newevent">Add Event</button><br />
+<br />
+<button routerLink="/newevent">Add Event</button>
+<br />
+<br />
 <div *ngFor="let event of allEvents">
-  <app-event-details [currentEvent]=event ></app-event-details>
+  <app-event-details [currentEvent]=event [(currentUser)]=username></app-event-details>
 </div>

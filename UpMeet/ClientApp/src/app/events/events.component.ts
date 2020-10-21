@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { DataAccessService } from '../data-access.service';
 import { Events } from '../interfaces/events';
 
@@ -12,9 +12,15 @@ export class EventsComponent {
     /** events ctor */
   constructor(private dal: DataAccessService) { }
 
+  @Output() callParent = new EventEmitter<string>();
   allEvents: Events;
+  username: string = "";
 
   ngOnInit(): void {
     this.dal.getAllEvents().subscribe((data: Events) => this.allEvents = data);
+  }
+
+  login() {
+    this.callParent.emit(this.username);
   }
 }
