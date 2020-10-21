@@ -1,6 +1,7 @@
 <body>
-  <app-nav-menu></app-nav-menu>
+  <app-nav-menu [(currentUser)]=username></app-nav-menu>
   <div class="container">
+    Username: <input [(ngModel)]="username" type="text" /><br />
     <router-outlet></router-outlet>
   </div>
 </body>

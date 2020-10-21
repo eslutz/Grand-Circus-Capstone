@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DataAccessService } from '../data-access.service';
 import { Events } from '../interfaces/events';
 
@@ -14,6 +14,7 @@ export class FavoritesComponent {
 
   favEvents: Events;
   username: string = "testuser2";
+  @Input() currentUser: string;
 
   ngOnInit(): void {
     this.dal.getFavorites(this.username).subscribe((data: Events) => this.favEvents = data);

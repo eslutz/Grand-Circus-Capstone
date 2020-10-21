@@ -6,6 +6,6 @@ import { Component, Output } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  @Output() currentUser: string;
+  username: string = "";
 
 }

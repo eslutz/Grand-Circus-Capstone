@@ -1,4 +1,5 @@
 <h3>Favorites for: {{username}}</h3>
+{{currentUser}}
 <div *ngFor="let event of favEvents">
   <app-event-details [currentEvent]=event></app-event-details>
 </div>
