@@ -30,6 +30,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\src\app\event-details\event-details.component.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\events\events.component.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\favorites\favorites.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\events.js" />
     <None Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\events.js.map" />
     <None Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\favorites.js" />
