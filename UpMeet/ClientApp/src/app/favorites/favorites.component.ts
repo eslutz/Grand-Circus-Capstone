@@ -21,6 +21,6 @@ export class FavoritesComponent {
   }
 
   removeFavorite(id: number) {
-    this.dal.deleteFavorite(id).subscribe((data) => console.log(data));
+    this.dal.deleteFavorite(id).subscribe((data: any) => console.log(data));
   }
 }
