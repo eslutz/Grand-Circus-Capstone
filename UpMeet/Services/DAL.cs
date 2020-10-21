@@ -61,12 +61,5 @@ namespace UpMeet.Services
             SqlConnection conn = new SqlConnection(connString);
             conn.Delete(new Favorites() {ID = fav.ID});
         }
-
-        public void RemoveEvents(Events eve)
-        {
-            SqlConnection conn = new SqlConnection(connString);
-            conn.Delete(new Events() { EventID = eve.EventID });
-        }
-
     }
 }

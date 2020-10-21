@@ -30,13 +30,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\interfaces\events.ts" />
-    <None Remove="ClientApp\src\interfaces\favorites.ts" />
+    <None Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\events.js" />
+    <None Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\events.js.map" />
+    <None Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\favorites.js" />
+    <None Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\favorites.js.map" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\interfaces\events.ts" />
-    <TypeScriptCompile Include="ClientApp\src\interfaces\favorites.ts" />
+    <TypeScriptCompile Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\events.ts" />
+    <TypeScriptCompile Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\events.ts" />
+    <TypeScriptCompile Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\favorites.ts" />
+    <TypeScriptCompile Include="..\..\..\..\..\Dev.Build%25284.0%2529 Code\Grand Circus Labs\Labs\Lab 18 Capstone\UpMeet\ClientApp\src\app\interfaces\favorites.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

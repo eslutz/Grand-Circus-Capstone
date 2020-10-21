@@ -36,6 +36,5 @@ namespace UpMeet.Controllers
         {
             dal.RemoveFavorite(fav);
         }
-
     }
 }
