@@ -32,8 +32,13 @@ export class DataAccessService {
     return this.http.post(`${this.apiFavorites}/add`, fave);
   }
 
-  deleteFavorite(fave) {
-    return this.http.post(`${this.apiFavorites}/remove`, fave);
+  deleteFavorite(id) {
+    debugger;
+    return this.http.post(`${this.apiFavorites}/remove`, id);
+  }
+
+  getFavs(username) {
+    return this.http.get(`${this.apiFavorites}/favs/${username}`);
   }
 
 }

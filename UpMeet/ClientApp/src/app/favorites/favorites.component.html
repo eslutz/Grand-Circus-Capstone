@@ -1,9 +1,9 @@
 <h3>Favorites for: {{username}}</h3>
 {{currentUser}}
-<div *ngFor="let event of favEvents">
+<div *ngFor="let event of favEvents; let i = index">
   {{event.name}}<br />
   {{event.description}}<br />
   {{event.date}}<br />
-  <button (click)="removeFavorite(event.id)" routerLink="/favorites">Remove Favorite</button>
+  <button (click)="removeFavorite(favEventsIDs[i].id)" routerLink="/favorites">Remove Favorite</button>
   <hr />
 </div>

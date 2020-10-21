@@ -56,10 +56,19 @@ namespace UpMeet.Services
             conn.Insert(fav);
         }
 
-        public void RemoveFavorite(Favorites fav)
+        public void RemoveFavorite(long id)
         {
             SqlConnection conn = new SqlConnection(connString);
-            conn.Delete(new Favorites() {id = fav.id});
+            conn.Delete(new Favorites() {id = id});
+        }
+
+        public IEnumerable<Favorites> getFavs(string username)
+		{
+            SqlConnection conn = new SqlConnection(connString);
+            string command = $"SELECT * FROM dbo.Favorites where Username = '{username}';";  //semicolon?
+            IEnumerable<Favorites> result = conn.Query<Favorites>(command);
+            conn.Close();
+            return result;
         }
     }
 }
