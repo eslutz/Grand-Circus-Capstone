@@ -15,7 +15,7 @@ namespace UpMeet.Services
         private string connString;
         public DAL(IConfiguration config)
         {
-            connString = config.GetConnectionString("Tyler");
+            connString = config.GetConnectionString("Eric");
         }
         public IEnumerable<Events> GetAllEvents()
         {
