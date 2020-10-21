@@ -15,7 +15,7 @@ export class DataAccessService {
   }
 
   createEvent(eve) {
-    return this.http.post(`${this.apiEvents}/add/`, eve);
+    return this.http.post(`${this.apiEvents}/add`, eve);
   }
 
   getEvent(id) {
@@ -27,7 +27,7 @@ export class DataAccessService {
   }
 
   addFavorite(fave) {
-    return this.http.post(`${this.apiFavorites}/add/`, fave);
+    return this.http.post(`${this.apiFavorites}/add`, fave);
   }
 
   deleteFavorite(fave) {
