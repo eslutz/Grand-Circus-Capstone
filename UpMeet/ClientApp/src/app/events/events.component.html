@@ -1,1 +1,3 @@
-﻿<div style="border: 1px solid red">events Component</div>
+<div *ngFor="let event of allEvents">
+  <app-event-details [currentEventt]=event ></app-event-details>
+</div>

@@ -1,4 +1,5 @@
-﻿import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { EventDetails, Events } from '../interfaces/events';
 
 @Component({
     selector: 'app-event-details',
@@ -8,7 +9,7 @@
 /** event-details component*/
 export class EventDetailsComponent {
     /** event-details ctor */
-    constructor() {
+  constructor() { }
 
-    }
+  @Input() currentEvent: EventDetails;
 }
