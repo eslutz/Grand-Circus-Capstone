@@ -1,10 +1,10 @@
 export interface Events {
-  Events: EventDetails[]
+  events: EventDetails[]
 }
 
 export interface EventDetails {
-  EventID: number,
-  Name: string,
-  Description: string,
-  Date: string
+  eventID: number,
+  name: string,
+  description: string,
+  date: string
 }

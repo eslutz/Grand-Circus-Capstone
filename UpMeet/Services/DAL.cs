@@ -29,7 +29,7 @@ namespace UpMeet.Services
         {
             SqlConnection conn = new SqlConnection(connString);
             string command = $"SELECT * FROM Events WHERE EventID={ID}";
-            Events result = conn.QueryFirst<Events>(command, new { EventID = ID });
+            Events result = conn.QueryFirst<Events>(command, new { eventID = ID });
             conn.Close();
             return result;
         }
@@ -51,7 +51,7 @@ namespace UpMeet.Services
 
         public void AddFavorite(Favorites fav)
         {
-            fav.ID = DateTime.Now.Ticks;
+            fav.id = DateTime.Now.Ticks;
             SqlConnection conn = new SqlConnection(connString);
             conn.Insert(fav);
         }
@@ -59,7 +59,7 @@ namespace UpMeet.Services
         public void RemoveFavorite(Favorites fav)
         {
             SqlConnection conn = new SqlConnection(connString);
-            conn.Delete(new Favorites() {ID = fav.ID});
+            conn.Delete(new Favorites() {id = fav.id});
         }
     }
 }

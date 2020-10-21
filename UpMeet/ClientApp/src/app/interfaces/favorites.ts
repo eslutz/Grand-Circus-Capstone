@@ -3,7 +3,7 @@ export interface Favorites {
 }
 
 export interface FavoriteDetails {
-  ID: number,
-  Username: string,
-  EventID: number
+  id: number,
+  username: string,
+  eventID: number
 }

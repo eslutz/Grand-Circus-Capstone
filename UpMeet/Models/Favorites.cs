@@ -10,8 +10,8 @@ namespace UpMeet.Models
     public class Favorites
     {
         [Key]
-        public long ID { get; set; }
-        public string Username { get; set; }
-        public long EventID { get; set; }
+        public long id { get; set; }
+        public string username { get; set; }
+        public long eventID { get; set; }
     }
 }

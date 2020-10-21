@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Events } from './interfaces/events';
 
 
 @Injectable({providedIn: 'root'})
@@ -10,7 +11,7 @@ export class DataAccessService {
   apiFavorites: string = 'api/Favorites';
 
   getAllEvents() {
-    return this.http.get(this.apiEvents);
+    return this.http.get<Events>(this.apiEvents);
   }
 
   createEvent(eve) {

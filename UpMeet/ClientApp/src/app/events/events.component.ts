@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataAccessService } from '../data-access.service';
+import { Events } from '../interfaces/events';
 
 @Component({
     selector: 'app-events',
@@ -11,8 +12,9 @@ export class EventsComponent {
     /** events ctor */
   constructor(private dal: DataAccessService) { }
 
-  events: Event;
+  allEvents: Events;
 
   ngOnInit(): void {
-    this.dal.getAllEvents().subscribe((data: Event) => this.events = data)  }
+    this.dal.getAllEvents().subscribe((data: Events) => this.allEvents = data);
+  }
 }
