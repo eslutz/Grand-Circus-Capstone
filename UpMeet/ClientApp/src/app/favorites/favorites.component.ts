@@ -19,4 +19,8 @@ export class FavoritesComponent {
   ngOnInit(): void {
     this.dal.getFavorites(this.username).subscribe((data: Events) => this.favEvents = data);
   }
+
+  removeFavorite(id: number) {
+    this.dal.deleteFavorite(id).subscribe((data) => console.log(data));
+  }
 }

@@ -4,5 +4,6 @@
   {{event.name}}<br />
   {{event.description}}<br />
   {{event.date}}<br />
+  <button (click)="removeFavorite(event.id)" routerLink="/favorites">Remove Favorite</button>
   <hr />
 </div>
