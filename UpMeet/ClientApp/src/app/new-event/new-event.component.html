@@ -1,1 +1,18 @@
-﻿<div style="border: 1px solid red">new-event Component</div>
+<h1>Create a New Event</h1>
+<div>
+    <table>
+      <tr>
+        <td>Event Name</td>
+        <td><input [(ngModel)]="event.name" type="text" /></td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td><input [(ngModel)]="event.description" type="text" /></td>
+      </tr>
+      <tr>
+        <td>Date</td>
+        <td><input [(ngModel)]="event.date" type="text" /></td>
+      </tr>
+    </table>
+    <button (click)="doCreate()">Create</button>
+</div>

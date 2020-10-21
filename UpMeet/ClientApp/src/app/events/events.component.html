@@ -1,3 +1,5 @@
+<h1>Events</h1>
+<button routerLink="/newevent">Add Event</button><br />
 <div *ngFor="let event of allEvents">
   <app-event-details [currentEvent]=event ></app-event-details>
 </div>
