@@ -33,6 +33,7 @@
     <TypeScriptCompile Remove="ClientApp\src\app\event-details\event-details.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\events\events.component.ts" />
     <TypeScriptCompile Remove="ClientApp\src\app\favorites\favorites.component.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\new-event\new-event.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
